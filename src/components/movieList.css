@@ -1,22 +1,3 @@
-/* .movie {
-    width: 75%;
-    color: white;
-    background-color: black;
- }
-  
- .title-year {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
- }
-  
- .title, .year {
-    font-weight: bold;
- }
-  
- .poster {
-    border-radius: 5%;
- } */
 
  .moviebox{
     width:280px;

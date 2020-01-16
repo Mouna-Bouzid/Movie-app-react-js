@@ -12,7 +12,7 @@
   padding: 1%;
   display: flex;
   width:850px;
-  border:solid white;
+  /* border:solid white; */
 }
 
 .topnav input[type=text] {
@@ -38,4 +38,7 @@
 
 .topnav .search-container button:hover {
   background: #ccc;
+}
+.searchRating{
+  margin:2% 0% 0% 3%;
 }

@@ -20,12 +20,12 @@ export default class App extends Component {
           {src:"https://images-na.ssl-images-amazon.com/images/I/81FN3aUeAOL._AC_SY550_.jpg", title:"Aladdin", rate:4}],
           inputSearch:'',
           value:0,
-          val:3
+         
         }
   }
-handleAdd=(source,titre,rate)=>{
+handleAdd=(newMovie)=>{
   this.setState({
-    cards:[...this.state.cards,{src:source,title:titre,rate:rate}]
+    cards:[...this.state.cards,newMovie]
   })
 }
 handleChange=(e)=>{
@@ -33,20 +33,20 @@ handleChange=(e)=>{
       inputSearch:e.target.value,
   })
 } 
-handleRating=(e)=>{
-  this.setState({
-    value:this.state.value
-    // value: undefined
-  });
-}
+
+onStarClick=(nextValue, prevValue, name)=> {
+  this.setState({value: nextValue});
+} 
 
   render() {
       return (
         <div className="App">
-        <Header cards={this.state.cards} data={this.handleChange} val={this.state.val}/>
+        <Header cards={this.state.cards} data={this.handleChange} onStarClick={this.onStarClick}/>
+
         <div className='MovieListAdd'>
-        <MovieList cards={this.state.cards} movieSearched={this.state.inputSearch} val={this.state.value} />
-        <AddMovie cards={this.state.cards} add={this.handleAdd} value={this.state.value} />
+        <MovieList cards={this.state.cards} movieSearched={this.state.inputSearch} starRate={this.state.value} />
+       <AddMovie cards={this.state.cards} add={this.handleAdd} />
+
         </div>
        </div>
       );
