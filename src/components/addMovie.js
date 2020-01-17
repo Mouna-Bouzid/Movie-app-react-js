@@ -31,17 +31,7 @@ export default class AddMovie extends Component {
           [event.target.name]:event.target.value
       })
   }
-    // newMovieData=(e)=>{
-    //     e.preventDefault();
-    //     this.props.add(this.state.src,this.state.Title,this.state.rate)
-    //     this.closeModal()  
-    //     this.setState({
-    //         Title:'',
-    //         src:'',
-    //         rate:''
-    //     }  )
-    // }
-  
+    
     render() {
         return (
             

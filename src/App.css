@@ -1,7 +1,7 @@
 
 .App{
   background-color: black;
- 
+
 }
 .addmovie{
   float: left;
@@ -16,6 +16,5 @@ flex-wrap: wrap;
 
 .movieboxes{
   display: flex;
-
   flex-wrap: wrap;
 }

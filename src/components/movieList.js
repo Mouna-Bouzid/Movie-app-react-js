@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import './movieList.css'
 import AddMovie from './addMovie.js'
 import Rating from 'react-star-rating-component'
-
-export default class movieList extends Component {
+import Hoc from './loadingHoc'
+class movieList extends Component {
 
     render(props) {
         return (
@@ -30,3 +30,4 @@ export default class movieList extends Component {
         )
     }
 }
+export default  Hoc(movieList);
